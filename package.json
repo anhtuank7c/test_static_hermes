@@ -1,0 +1,15 @@
+{
+  "name": "test_static_hermes",
+  "author": {
+    "email": "anhtuank7c@hotmail.com",
+    "name": "Tuan Nguyen",
+    "url": "https://anhtuank7c.github.io"
+  },
+  "scripts": {
+    "build-hermes": "cmake -S hermes -B build -G Ninja && cmake --build ./build",
+    "build-cpp": "g++ -o ./output/helloCPP ./src/helloCPP.cpp",
+    "build-ts": "./build/bin/shermes -typed -l jsi -L ./build/jsi -o ./output/helloTypeScript ./src/helloTypeScript.ts",
+    "build-js": "./build/bin/shermes -typed -l jsi -L ./build/jsi -o ./output/helloJavascript ./src/helloJavascript.js"
+  },
+  "license": "MIT"
+}
